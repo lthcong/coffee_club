@@ -31,6 +31,7 @@ class ProductCell: UITableViewCell {
     }
     
     @IBAction func addToBag(_ sender: Any) {
+        ProductBag.addToBag(selectedProduct: self.currentDrink)
     }
     
 }
