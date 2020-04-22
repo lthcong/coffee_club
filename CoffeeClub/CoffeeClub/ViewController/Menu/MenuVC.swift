@@ -20,6 +20,7 @@ class MenuVC: UIViewController {
     @IBOutlet weak var vMainContainer: UIView!
     @IBOutlet weak var cvMenuHomeContainer: UIView!
     @IBOutlet weak var cvMenuFavoriteContainer: UIView!
+    @IBOutlet weak var cvMenuBagContainer: UIView!
     
     let MENU_TILE: String = "MENU"
     let FAVORITE_TILE: String = "FAVORITE"
@@ -55,6 +56,13 @@ class MenuVC: UIViewController {
         self.vMainContainer.bringSubviewToFront(self.cvMenuFavoriteContainer)
     }
     
+    func showMenuBagSelection() -> Void {
+        self.lbTitle.text = BAG_TILE
+        self.setUnselected()
+        self.btnMenuBag.setImage(UIImage(named: "selected-bag"), for: .normal)
+        self.vMainContainer.bringSubviewToFront(self.cvMenuBagContainer)
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -76,6 +84,7 @@ class MenuVC: UIViewController {
     }
     
     @IBAction func menuBagSelection(_ sender: Any) {
+        self.showMenuBagSelection()
     }
     
     @IBAction func menuProfileSelection(_ sender: Any) {
