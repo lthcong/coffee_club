@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="BagCell" customModule="CoffeeClub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqd-cJ-Kwc">
+                        <rect key="frame" x="10" y="5" width="300" height="90"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dE6-tv-Ct1">
+                                <rect key="frame" x="5" y="5" width="290" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-expresso" translatesAutoresizingMaskIntoConstraints="NO" id="Cvz-Xu-HS6">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="7nR-i6-NJj"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="h3F-Xw-2b8">
+                                        <rect key="frame" x="100" y="0.0" width="190" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Espresso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Z6-ou-CI5">
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Ridge Blend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24z-TN-4po">
+                                                <rect key="frame" x="0.0" y="26.5" width="190" height="27"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 4.35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpb-jd-i9x">
+                                                <rect key="frame" x="0.0" y="53.5" width="190" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="textColor" red="0.0078431372550000003" green="0.81960784310000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="BagCellIdentifier" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtA-wM-3Kh">
+                                <rect key="frame" x="285" y="50" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="GVr-KQ-nCn"/>
+                                    <constraint firstAttribute="height" constant="20" id="u1g-Vq-vl6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="X" backgroundImage="add-product">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeFromBag:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kvn-Kr-Rgc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dE6-tv-Ct1" firstAttribute="top" secondItem="bqd-cJ-Kwc" secondAttribute="top" constant="5" id="1hi-aU-odI"/>
+                            <constraint firstAttribute="bottom" secondItem="dE6-tv-Ct1" secondAttribute="bottom" constant="5" id="9W4-J7-gR2"/>
+                            <constraint firstAttribute="trailing" secondItem="ZtA-wM-3Kh" secondAttribute="trailing" constant="-5" id="Y8x-bv-Sq4"/>
+                            <constraint firstAttribute="trailing" secondItem="dE6-tv-Ct1" secondAttribute="trailing" constant="5" id="huq-dc-pRL"/>
+                            <constraint firstAttribute="bottom" secondItem="ZtA-wM-3Kh" secondAttribute="bottom" constant="20" id="tim-tU-SON"/>
+                            <constraint firstItem="dE6-tv-Ct1" firstAttribute="leading" secondItem="bqd-cJ-Kwc" secondAttribute="leading" constant="5" id="vw3-QH-U8d"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="bqd-cJ-Kwc" secondAttribute="bottom" constant="5" id="f2L-Z0-u8a"/>
+                    <constraint firstAttribute="trailing" secondItem="bqd-cJ-Kwc" secondAttribute="trailing" constant="10" id="gK1-YA-jOT"/>
+                    <constraint firstItem="bqd-cJ-Kwc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="o1d-Nx-giW"/>
+                    <constraint firstItem="bqd-cJ-Kwc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="pIV-ge-W9z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ivProductImage" destination="Cvz-Xu-HS6" id="XU0-nH-rHe"/>
+                <outlet property="lbProductDes" destination="24z-TN-4po" id="KZW-bo-wiF"/>
+                <outlet property="lbProductName" destination="8Z6-ou-CI5" id="aq5-Hi-EWd"/>
+                <outlet property="lbProductPrice" destination="Tpb-jd-i9x" id="035-4V-qWB"/>
+                <outlet property="vMainView" destination="bqd-cJ-Kwc" id="re8-PD-RsB"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="90"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="add-product" width="28" height="28"/>
+        <image name="sample-expresso" width="145" height="145"/>
+    </resources>
+</document>

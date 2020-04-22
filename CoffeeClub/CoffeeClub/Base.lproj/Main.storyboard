@@ -1155,19 +1155,39 @@
             </objects>
             <point key="canvasLocation" x="-4130" y="93"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu BagVC-->
         <scene sceneID="f72-oi-L0E">
             <objects>
-                <viewController id="hB2-uN-TJf" sceneMemberID="viewController">
+                <viewController id="hB2-uN-TJf" customClass="MenuBagVC" customModule="CoffeeClub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PX8-Mb-twT">
                         <rect key="frame" x="0.0" y="0.0" width="394" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-P1-MnJ">
+                                <rect key="frame" x="0.0" y="0.0" width="394" height="673"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hB2-uN-TJf" id="rYG-OW-OER"/>
+                                    <outlet property="delegate" destination="hB2-uN-TJf" id="mBH-Oh-o9l"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fgf-P1-MnJ" firstAttribute="leading" secondItem="PX8-Mb-twT" secondAttribute="leading" id="9R2-Wk-jmX"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="fgf-P1-MnJ" secondAttribute="bottom" id="P6F-iv-p6Y"/>
+                            <constraint firstItem="fgf-P1-MnJ" firstAttribute="top" secondItem="PX8-Mb-twT" secondAttribute="top" id="PNL-aL-FjL"/>
+                            <constraint firstAttribute="trailing" secondItem="fgf-P1-MnJ" secondAttribute="trailing" id="dtS-ay-vvu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tbvItemList" destination="fgf-P1-MnJ" id="GWA-hu-lR2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UK3-zq-xMk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4130" y="788"/>
+            <point key="canvasLocation" x="-4130.434782608696" y="787.83482142857144"/>
         </scene>
     </scenes>
     <resources>

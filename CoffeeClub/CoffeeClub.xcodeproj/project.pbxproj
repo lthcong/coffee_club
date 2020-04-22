@@ -45,6 +45,9 @@
 		44C022DF2449413700A5BC7D /* BreakfastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C022DE2449413700A5BC7D /* BreakfastVC.swift */; };
 		44C022E62449643700A5BC7D /* BreakfastFavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C022E42449643700A5BC7D /* BreakfastFavoriteCell.swift */; };
 		44C022E72449643700A5BC7D /* BreakfastFavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C022E52449643700A5BC7D /* BreakfastFavoriteCell.xib */; };
+		44CDD4FA244FECB9003BD06E /* BagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CDD4F8244FECB9003BD06E /* BagCell.swift */; };
+		44CDD4FB244FECB9003BD06E /* BagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CDD4F9244FECB9003BD06E /* BagCell.xib */; };
+		44CDD4FE244FEF61003BD06E /* MenuBagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CDD4FD244FEF61003BD06E /* MenuBagVC.swift */; };
 		8807B3F72890F23D14E8AF7A /* Pods_CoffeeClub_CoffeeClubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35A2AA96CBD4A845964E655 /* Pods_CoffeeClub_CoffeeClubUITests.framework */; };
 		EB6206F398454A971AC09EA2 /* Pods_CoffeeClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C799E626D8C8C52948DD0 /* Pods_CoffeeClub.framework */; };
 /* End PBXBuildFile section */
@@ -110,6 +113,9 @@
 		44C022DE2449413700A5BC7D /* BreakfastVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakfastVC.swift; sourceTree = "<group>"; };
 		44C022E42449643700A5BC7D /* BreakfastFavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakfastFavoriteCell.swift; sourceTree = "<group>"; };
 		44C022E52449643700A5BC7D /* BreakfastFavoriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreakfastFavoriteCell.xib; sourceTree = "<group>"; };
+		44CDD4F8244FECB9003BD06E /* BagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagCell.swift; sourceTree = "<group>"; };
+		44CDD4F9244FECB9003BD06E /* BagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BagCell.xib; sourceTree = "<group>"; };
+		44CDD4FD244FEF61003BD06E /* MenuBagVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBagVC.swift; sourceTree = "<group>"; };
 		7B5D33E825C0BB3BE16829DA /* Pods-CoffeeClub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeClub.release.xcconfig"; path = "Target Support Files/Pods-CoffeeClub/Pods-CoffeeClub.release.xcconfig"; sourceTree = "<group>"; };
 		92F110D6D3100393306FB14E /* Pods-CoffeeClubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeClubTests.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeClubTests/Pods-CoffeeClubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A35A2AA96CBD4A845964E655 /* Pods_CoffeeClub_CoffeeClubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeClub_CoffeeClubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -299,6 +305,7 @@
 		44A0C6462446D4D200DEC3CD /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				44CDD4FC244FEF49003BD06E /* Bag */,
 				44117B27244F145800C24268 /* Favorite */,
 				44A0C65B2446FF9800DEC3CD /* Home */,
 				44A0C6472446D4F700DEC3CD /* MenuVC.swift */,
@@ -402,10 +409,28 @@
 		44C022E824496C1800A5BC7D /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				44CDD4F7244FEC93003BD06E /* BagCell */,
 				4438DD0724496EEE00B2E94D /* BreakfastMenuCell */,
 				44A05930244824A500F1B88A /* ProductCell */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		44CDD4F7244FEC93003BD06E /* BagCell */ = {
+			isa = PBXGroup;
+			children = (
+				44CDD4F8244FECB9003BD06E /* BagCell.swift */,
+				44CDD4F9244FECB9003BD06E /* BagCell.xib */,
+			);
+			path = BagCell;
+			sourceTree = "<group>";
+		};
+		44CDD4FC244FEF49003BD06E /* Bag */ = {
+			isa = PBXGroup;
+			children = (
+				44CDD4FD244FEF61003BD06E /* MenuBagVC.swift */,
+			);
+			path = Bag;
 			sourceTree = "<group>";
 		};
 		7EDAF3F1759C51B707EE190B /* Pods */ = {
@@ -542,6 +567,7 @@
 			files = (
 				44117B2E244F1CF600C24268 /* FavoriteProductCell.xib in Resources */,
 				44A0C64E2446E2CC00DEC3CD /* MenuCollectionCell.xib in Resources */,
+				44CDD4FB244FECB9003BD06E /* BagCell.xib in Resources */,
 				445956B5244D9AD9001FB146 /* GoogleService-Info.plist in Resources */,
 				4438DD0B24496F1A00B2E94D /* BreakfastMenuCell.xib in Resources */,
 				44A0C61C2446CD3500DEC3CD /* LaunchScreen.storyboard in Resources */,
@@ -679,6 +705,7 @@
 				4438DD13244984CC00B2E94D /* UIUtility.swift in Sources */,
 				44A05933244824C200F1B88A /* ProductCell.swift in Sources */,
 				4480D31B244D4CAD0080EC4B /* BreakfastDetailVC.swift in Sources */,
+				44CDD4FA244FECB9003BD06E /* BagCell.swift in Sources */,
 				4438DD1024497FA400B2E94D /* DrinkItemList.swift in Sources */,
 				4480D326244D5EDB0080EC4B /* BreakfastMenuList.swift in Sources */,
 				44A0C64D2446E2CC00DEC3CD /* MenuCollectionCell.swift in Sources */,
@@ -693,6 +720,7 @@
 				4438DD0A24496F1A00B2E94D /* BreakfastMenuCell.swift in Sources */,
 				44A0C6582446ECE800DEC3CD /* MenuItemList.swift in Sources */,
 				44A0C6452446CEED00DEC3CD /* DiscoverVC.swift in Sources */,
+				44CDD4FE244FEF61003BD06E /* MenuBagVC.swift in Sources */,
 				44A0C65A2446F78400DEC3CD /* HomeMenuVC.swift in Sources */,
 				4466FEC0244F9BBA008C806D /* ProductBag.swift in Sources */,
 				44A05936244828C200F1B88A /* DrinkVC.swift in Sources */,
