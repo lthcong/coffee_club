@@ -83,6 +83,7 @@ class MenuBagVC: UIViewController, UITableViewDataSource, UITableViewDelegate, P
     */
     
     @IBAction func sercueCheckout(_ sender: Any) {
+        Toast.show(message: "Successfully checkout", controller: self)
     }
     
 }

@@ -40,6 +40,10 @@ class HomeMenuVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
             if (selectedCell.currentMenuItem.itemTitle == MenuItemList.BREAKFAST.itemTitle) {
                 nextVC = storyBoard.instantiateViewController(withIdentifier: "BreakfastVCID") as! BreakfastVC
             }
+            else {
+                nextVC = storyBoard.instantiateViewController(withIdentifier: "MenuVCID") as! MenuVC
+                Toast.show(message: "Comming soon...", controller: nextVC)
+            }
         }
         
         self.present(nextVC, animated:true, completion:nil)
