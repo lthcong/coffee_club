@@ -1,0 +1,6 @@
+framework module Pods_CoffeeClub_CoffeeClubUITests {
+  umbrella header "Pods-CoffeeClub-CoffeeClubUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

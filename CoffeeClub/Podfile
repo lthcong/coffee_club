@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'CoffeeClub' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for CoffeeClub
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Performance'
+
+  target 'CoffeeClubTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CoffeeClubUITests' do
+    # Pods for testing
+  end
+
+end

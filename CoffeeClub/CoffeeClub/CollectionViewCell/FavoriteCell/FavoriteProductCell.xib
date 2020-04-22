@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavoriteProductCellIdentifier" id="gTV-IL-0wX" customClass="FavoriteProductCell" customModule="CoffeeClub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hc4-Gv-mr5">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-muffin" translatesAutoresizingMaskIntoConstraints="NO" id="VQT-oW-bgQ">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HwB-MX-3Kn"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cA-dz-pyU">
+                                <rect key="frame" x="0.0" y="100" width="150" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="wEh-i5-O23">
+                                        <rect key="frame" x="5" y="0.0" width="140" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chocolate Muffin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUr-mW-HWS">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chocolately fresh baked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmz-YC-rmk">
+                                                <rect key="frame" x="0.0" y="24" width="140" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="wEh-i5-O23" firstAttribute="leading" secondItem="2cA-dz-pyU" secondAttribute="leading" constant="5" id="Cnv-nx-Q4P"/>
+                                    <constraint firstItem="wEh-i5-O23" firstAttribute="top" secondItem="2cA-dz-pyU" secondAttribute="top" id="M6T-V8-UYD"/>
+                                    <constraint firstAttribute="bottom" secondItem="wEh-i5-O23" secondAttribute="bottom" constant="5" id="bnk-CI-LAV"/>
+                                    <constraint firstAttribute="trailing" secondItem="wEh-i5-O23" secondAttribute="trailing" constant="5" id="us6-at-0yz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VQT-oW-bgQ" firstAttribute="top" secondItem="hc4-Gv-mr5" secondAttribute="top" id="2EI-8N-pGI"/>
+                            <constraint firstAttribute="trailing" secondItem="2cA-dz-pyU" secondAttribute="trailing" id="7xL-q6-YtD"/>
+                            <constraint firstItem="VQT-oW-bgQ" firstAttribute="leading" secondItem="hc4-Gv-mr5" secondAttribute="leading" id="9xP-vG-mqQ"/>
+                            <constraint firstAttribute="trailing" secondItem="VQT-oW-bgQ" secondAttribute="trailing" id="BCd-P0-cds"/>
+                            <constraint firstItem="2cA-dz-pyU" firstAttribute="top" secondItem="VQT-oW-bgQ" secondAttribute="bottom" id="Jir-Qv-H6R"/>
+                            <constraint firstItem="2cA-dz-pyU" firstAttribute="leading" secondItem="hc4-Gv-mr5" secondAttribute="leading" id="aMg-dr-aLx"/>
+                            <constraint firstAttribute="bottom" secondItem="2cA-dz-pyU" secondAttribute="bottom" id="nMq-DK-gpO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="hc4-Gv-mr5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PVI-nQ-Ubn"/>
+                <constraint firstAttribute="trailing" secondItem="hc4-Gv-mr5" secondAttribute="trailing" id="Ytg-te-WP5"/>
+                <constraint firstItem="hc4-Gv-mr5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="syN-JW-eXA"/>
+                <constraint firstAttribute="bottom" secondItem="hc4-Gv-mr5" secondAttribute="bottom" id="u9r-qo-mfD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="ivFavoriteImage" destination="VQT-oW-bgQ" id="F5z-Gq-UdQ"/>
+                <outlet property="lbFavoriteDes" destination="cmz-YC-rmk" id="1S4-50-E8K"/>
+                <outlet property="lbFavoriteName" destination="QUr-mW-HWS" id="3ZR-92-XeD"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="sample-muffin" width="112" height="127"/>
+    </resources>
+</document>
