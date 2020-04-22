@@ -21,6 +21,16 @@ class ProductItem {
     
     init() { }
     
+    init(name: String, type: Int, des: String, imageUrl: String, price: Double, rating: Int) {
+        self.productName = name
+        self.productType = type
+        self.productDescription = des
+        self.productDetail = des
+        self.productImageURL = imageUrl
+        self.productPrice = price
+        self.productRating = rating
+    }
+    
     init(name: String, type: Int, des: String, detail: String, imageUrl: String, price: Double, rating: Int) {
         self.productName = name
         self.productType = type

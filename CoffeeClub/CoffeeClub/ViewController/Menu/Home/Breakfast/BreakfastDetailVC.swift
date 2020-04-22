@@ -23,8 +23,6 @@ class BreakfastDetailVC: UIViewController {
 
         // Do any additional setup after loading the view.
         self.setupUI()
-        
-        print("Name: " + self.currentProduct.productName)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,7 +38,7 @@ class BreakfastDetailVC: UIViewController {
         self.ivProductImage.image = UIImage(named: self.currentProduct.productImageURL)
         self.lbProductName.text = self.currentProduct.productName
         self.lbProductPrice.text = "$" + String(self.currentProduct.productPrice)
-        self.lbProductDes.text = self.currentProduct.productDescription
+        self.lbProductDes.text = self.currentProduct.productDetail
     }
     
 
