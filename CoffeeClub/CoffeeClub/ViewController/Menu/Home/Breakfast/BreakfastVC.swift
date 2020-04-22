@@ -33,6 +33,11 @@ class BreakfastVC: UIViewController {
     }
     */
     
+    @IBAction func navigateHome(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let menuVC = storyBoard.instantiateViewController(withIdentifier: "MenuVCID") as! MenuVC
+        self.present(menuVC, animated:true, completion:nil)
+    }
     
     @IBAction func showFullBreakfastMenu(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

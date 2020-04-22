@@ -15,9 +15,9 @@ class MenuVC: UIViewController {
     @IBOutlet weak var btnMenuHome: UIButton!
     @IBOutlet weak var btnMenuFavorite: UIButton!
     @IBOutlet weak var btnMenuBag: UIButton!
-    @IBOutlet weak var btnMenuProfile: UIButton!
     
     @IBOutlet weak var vMainContainer: UIView!
+    @IBOutlet weak var cvLeftSideMenuContainer: UIView!
     @IBOutlet weak var cvMenuHomeContainer: UIView!
     @IBOutlet weak var cvMenuFavoriteContainer: UIView!
     @IBOutlet weak var cvMenuBagContainer: UIView!
@@ -74,6 +74,8 @@ class MenuVC: UIViewController {
     }
     */
     
+    @IBAction func showLeftSideMenu(_ sender: Any) { }
+    
     @IBAction func menuHomeSelection(_ sender: Any) {
         self.showMenuHomeSelection()
     }
@@ -85,9 +87,6 @@ class MenuVC: UIViewController {
     
     @IBAction func menuBagSelection(_ sender: Any) {
         self.showMenuBagSelection()
-    }
-    
-    @IBAction func menuProfileSelection(_ sender: Any) {
     }
     
 
