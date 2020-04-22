@@ -8,10 +8,13 @@
 
 import UIKit
 
-class MenuBagVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class MenuBagVC: UIViewController, UITableViewDataSource, UITableViewDelegate, ProductBagDelegate {
     
     @IBOutlet weak var tbvItemList: UITableView!
+    @IBOutlet weak var lbDeliveryCharge: UILabel!
+    @IBOutlet weak var lbSubtotal: UILabel!
+    @IBOutlet weak var lbTotal: UILabel!
+    @IBOutlet weak var btnSercueCheckout: UIButton!
     
     var productList: [ProductItem] = ProductBag.productList
     
@@ -21,8 +24,23 @@ class MenuBagVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         // Do any additional setup after loading the view.
         let bagNib = UINib(nibName: "BagCell", bundle: nil)
         self.tbvItemList.register(bagNib, forCellReuseIdentifier: "BagCellIdentifier")
+        
+        //  SET UP UI
+        self.setupUI()
+        
+        //  SHOW CHECKOUT INFO
+        self.showCheckoutInfo()
     }
     
+    func setupUI() -> Void {
+        self.btnSercueCheckout.layer.cornerRadius = 10
+    }
+    
+    func showCheckoutInfo() -> Void {
+        self.lbDeliveryCharge.text = "$ " + String(ProductBag.subCharge)
+        self.lbSubtotal.text = "$ " + String(ProductBag.productCharge)
+        self.lbTotal.text = "$ " + String(ProductBag.total)
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,7 +54,21 @@ class MenuBagVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let bagCell = tableView.dequeueReusableCell(withIdentifier: "BagCellIdentifier", for: indexPath) as! BagCell
         
+        let indexRow = indexPath.row
+        bagCell.currentProduct = self.productList[indexRow]
+        bagCell.onRemoveProduct = self
+        bagCell.ivProductImage.image = UIImage(named: self.productList[indexRow].productImageURL)
+        bagCell.lbProductName.text = self.productList[indexRow].productName
+        bagCell.lbProductDes.text = self.productList[indexRow].productDescription
+        bagCell.lbProductPrice.text = "$" + String(self.productList[indexRow].productPrice)
+        
         return bagCell
+    }
+    
+    func itemHasChanged(_ productList: [ProductItem]) {
+        self.productList = productList
+        self.tbvItemList.reloadData()
+        self.showCheckoutInfo()
     }
     
 
@@ -49,5 +81,8 @@ class MenuBagVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func sercueCheckout(_ sender: Any) {
+    }
+    
 }

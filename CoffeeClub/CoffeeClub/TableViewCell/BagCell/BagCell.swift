@@ -10,7 +10,6 @@ import UIKit
 
 class BagCell: UITableViewCell {
 
-    
     @IBOutlet weak var vMainView: UIView!
     @IBOutlet weak var ivProductImage: UIImageView!
     @IBOutlet weak var lbProductName: UILabel!
@@ -18,6 +17,7 @@ class BagCell: UITableViewCell {
     @IBOutlet weak var lbProductPrice: UILabel!
     
     var currentProduct: ProductItem = ProductItem()
+    var onRemoveProduct: ProductBagDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +34,8 @@ class BagCell: UITableViewCell {
     
     
     @IBAction func removeFromBag(_ sender: Any) {
+        ProductBag.removeFromBag(selectedProduct: self.currentProduct)
+        self.onRemoveProduct?.itemHasChanged(ProductBag.productList)
     }
     
 }
