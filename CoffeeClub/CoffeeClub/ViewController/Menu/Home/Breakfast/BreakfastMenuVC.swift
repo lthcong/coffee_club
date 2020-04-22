@@ -41,7 +41,7 @@ class BreakfastMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCell = tableView.dequeueReusableCell(withIdentifier: "BreakfastMenuCellIdentifier", for: indexPath) as! BreakfastMenuCell
+        let selectedCell = tableView.cellForRow(at: indexPath) as! BreakfastMenuCell
         self.selectedProduct = selectedCell.currentBreakfast
         self.showProductDetail()
     }
@@ -68,7 +68,7 @@ class BreakfastMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BreakfastFavoriteCellIdentifier", for: indexPath) as! BreakfastFavoriteCell        
+        let selectedCell = collectionView.cellForItem(at: indexPath) as! BreakfastFavoriteCell        
         self.selectedProduct = selectedCell.currentProduct
         self.showProductDetail()
     }
