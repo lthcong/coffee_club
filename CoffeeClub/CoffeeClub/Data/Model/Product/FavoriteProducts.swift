@@ -19,8 +19,17 @@ class FavoriteProducts {
     
     static var FAVORITE_LIST: [ProductItem] = [CHOCOLATE_MUFFIN, CLASSIC_BAGEL, CARAMEL_FRAPPE, CLASSIC_BREAKFAST, CHOCO_COOKIES, CHOCO_FRAPPE]
     
+    static func isContain(favoriteProduct: ProductItem) -> Bool {
+        if (self.FAVORITE_LIST.contains(where: {$0.productName == favoriteProduct.productName})) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
     static func addToFavorite(favoriteProduct: ProductItem) {
-        if (!self.FAVORITE_LIST.contains(where: {$0.productName == favoriteProduct.productName})) {
+        if (!self.isContain(favoriteProduct: favoriteProduct)) {
             self.FAVORITE_LIST.append(favoriteProduct)
         }
     }

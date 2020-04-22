@@ -62,6 +62,7 @@ class BreakfastDetailVC: UIViewController {
     
     @IBAction func addToFavorite(_ sender: Any) {
         FavoriteProducts.addToFavorite(favoriteProduct: self.currentProduct)
+        Toast.show(message: "Add to your favorite", controller: self)
     }
     
     

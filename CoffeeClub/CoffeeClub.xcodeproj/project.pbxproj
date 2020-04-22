@@ -48,6 +48,7 @@
 		44CDD4FA244FECB9003BD06E /* BagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CDD4F8244FECB9003BD06E /* BagCell.swift */; };
 		44CDD4FB244FECB9003BD06E /* BagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CDD4F9244FECB9003BD06E /* BagCell.xib */; };
 		44CDD4FE244FEF61003BD06E /* MenuBagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CDD4FD244FEF61003BD06E /* MenuBagVC.swift */; };
+		44CDD5012450102D003BD06E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CDD5002450102D003BD06E /* Toast.swift */; };
 		8807B3F72890F23D14E8AF7A /* Pods_CoffeeClub_CoffeeClubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35A2AA96CBD4A845964E655 /* Pods_CoffeeClub_CoffeeClubUITests.framework */; };
 		EB6206F398454A971AC09EA2 /* Pods_CoffeeClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C799E626D8C8C52948DD0 /* Pods_CoffeeClub.framework */; };
 /* End PBXBuildFile section */
@@ -116,6 +117,7 @@
 		44CDD4F8244FECB9003BD06E /* BagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagCell.swift; sourceTree = "<group>"; };
 		44CDD4F9244FECB9003BD06E /* BagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BagCell.xib; sourceTree = "<group>"; };
 		44CDD4FD244FEF61003BD06E /* MenuBagVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBagVC.swift; sourceTree = "<group>"; };
+		44CDD5002450102D003BD06E /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		7B5D33E825C0BB3BE16829DA /* Pods-CoffeeClub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeClub.release.xcconfig"; path = "Target Support Files/Pods-CoffeeClub/Pods-CoffeeClub.release.xcconfig"; sourceTree = "<group>"; };
 		92F110D6D3100393306FB14E /* Pods-CoffeeClubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeClubTests.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeClubTests/Pods-CoffeeClubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A35A2AA96CBD4A845964E655 /* Pods_CoffeeClub_CoffeeClubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeClub_CoffeeClubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,6 +245,7 @@
 		44A0C60E2446CD3100DEC3CD /* CoffeeClub */ = {
 			isa = PBXGroup;
 			children = (
+				44CDD4FF2450101D003BD06E /* CustomView */,
 				445956B4244D9AD9001FB146 /* GoogleService-Info.plist */,
 				44C022E824496C1800A5BC7D /* TableViewCell */,
 				44A0C64F2446EB2400DEC3CD /* Data */,
@@ -431,6 +434,14 @@
 				44CDD4FD244FEF61003BD06E /* MenuBagVC.swift */,
 			);
 			path = Bag;
+			sourceTree = "<group>";
+		};
+		44CDD4FF2450101D003BD06E /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				44CDD5002450102D003BD06E /* Toast.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		7EDAF3F1759C51B707EE190B /* Pods */ = {
@@ -724,6 +735,7 @@
 				44A0C65A2446F78400DEC3CD /* HomeMenuVC.swift in Sources */,
 				4466FEC0244F9BBA008C806D /* ProductBag.swift in Sources */,
 				44A05936244828C200F1B88A /* DrinkVC.swift in Sources */,
+				44CDD5012450102D003BD06E /* Toast.swift in Sources */,
 				44117B29244F147400C24268 /* FavoriteVC.swift in Sources */,
 				44A0C6482446D4F700DEC3CD /* MenuVC.swift in Sources */,
 				4480D322244D5BF30080EC4B /* BreakfastMenuVC.swift in Sources */,
