@@ -128,31 +128,24 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNt-TF-C5l">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="75"/>
                                                 <state key="normal" image="selected-home"/>
                                                 <connections>
                                                     <action selector="menuHomeSelection:" destination="ugx-bX-MZW" eventType="touchUpInside" id="7f2-OM-F8Q"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr5-U2-dNp">
-                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="75"/>
+                                                <rect key="frame" x="138" y="0.0" width="138" height="75"/>
                                                 <state key="normal" image="unselected-favorite"/>
                                                 <connections>
                                                     <action selector="menuFavoriteSelection:" destination="ugx-bX-MZW" eventType="touchUpInside" id="6n2-sL-pQU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpe-8g-mti">
-                                                <rect key="frame" x="207" y="0.0" width="103.5" height="75"/>
+                                                <rect key="frame" x="276" y="0.0" width="138" height="75"/>
                                                 <state key="normal" image="unselected-bag"/>
                                                 <connections>
                                                     <action selector="menuBagSelection:" destination="ugx-bX-MZW" eventType="touchUpInside" id="lOH-Gg-tp7"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71a-gs-cW1">
-                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="75"/>
-                                                <state key="normal" image="unselected-profile"/>
-                                                <connections>
-                                                    <action selector="menuProfileSelection:" destination="ugx-bX-MZW" eventType="touchUpInside" id="Kzx-cb-rEW"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -270,7 +263,6 @@
                         <outlet property="btnMenuBag" destination="mpe-8g-mti" id="1s8-vS-rBp"/>
                         <outlet property="btnMenuFavorite" destination="Zr5-U2-dNp" id="nVo-vt-U2H"/>
                         <outlet property="btnMenuHome" destination="MNt-TF-C5l" id="d3Q-yH-dJE"/>
-                        <outlet property="btnMenuProfile" destination="71a-gs-cW1" id="ENY-cN-vZG"/>
                         <outlet property="cvMenuBagContainer" destination="sPo-zb-NJi" id="5qN-6J-kTJ"/>
                         <outlet property="cvMenuFavoriteContainer" destination="lWK-Ma-Bcb" id="ATs-Ms-81h"/>
                         <outlet property="cvMenuHomeContainer" destination="pL1-Dd-THM" id="Rfv-E8-n6L"/>
@@ -1340,6 +1332,5 @@
         <image name="selected-home" width="18" height="18"/>
         <image name="unselected-bag" width="19" height="21"/>
         <image name="unselected-favorite" width="21" height="19"/>
-        <image name="unselected-profile" width="21" height="22"/>
     </resources>
 </document>

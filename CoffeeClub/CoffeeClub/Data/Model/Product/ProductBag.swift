@@ -15,7 +15,7 @@ protocol ProductBagDelegate {
 class ProductBag {
     
     static var productList: [ProductItem] = [ProductItem]()
-    static var total: Double = 0.0
+    static var total: Double = 10.0
     static var productCharge: Double = 0.0
     static var subCharge: Double = 10.0
     static var itemHasChange: ProductBagDelegate?

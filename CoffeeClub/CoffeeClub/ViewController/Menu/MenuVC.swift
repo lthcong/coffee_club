@@ -39,7 +39,7 @@ class MenuVC: UIViewController {
         btnMenuHome.setImage(UIImage(named: "unselected-home"), for: .normal)
         btnMenuFavorite.setImage(UIImage(named: "unselected-favorite"), for: .normal)
         btnMenuBag.setImage(UIImage(named: "unselected-bag"), for: .normal)
-        btnMenuProfile.setImage(UIImage(named: "unselected-profile"), for: .normal)
+        //btnMenuProfile.setImage(UIImage(named: "unselected-profile"), for: .normal)
     }
     
     func showMenuHomeSelection() -> Void {
