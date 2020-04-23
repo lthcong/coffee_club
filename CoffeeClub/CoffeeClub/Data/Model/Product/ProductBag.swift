@@ -36,18 +36,27 @@ class ProductBag {
         }
     }
     
+    static func checkoutBag() -> Void {
+        self.productList.removeAll()
+        self.updateBagInfo()
+    }
+    
     static private func updateBagInfo() {
         //  UPDATE PRODUCT CHARGE
         self.productCharge = 0.0
         self.productList.forEach() {
             self.productCharge = self.productCharge + $0.productPrice
         }
+        self.productCharge = (self.productCharge * 100).rounded() / 100
         
         //  UPDATE TOTAL
         self.total = self.productCharge + self.subCharge
+        self.total = (self.total * 100).rounded() / 100
         
         self.itemHasChange?.itemHasChanged(self.productList)
     }
+    
+    
     
     
 }

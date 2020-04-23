@@ -60,7 +60,13 @@ class MenuBagVC: UIViewController, UITableViewDataSource, UITableViewDelegate, P
         bagCell.ivProductImage.image = UIImage(named: self.productList[indexRow].productImageURL)
         bagCell.lbProductName.text = self.productList[indexRow].productName
         bagCell.lbProductDes.text = self.productList[indexRow].productDescription
-        bagCell.lbProductPrice.text = "$" + String(self.productList[indexRow].productPrice)
+        
+        if (self.productList[indexRow].productPrice < 10.0) {
+            bagCell.lbProductPrice.text = "$" + String(format: "%.2f", self.productList[indexRow].productPrice)
+        }
+        else {
+            bagCell.lbProductPrice.text = "$" + String(self.productList[indexRow].productPrice)
+        }
         
         return bagCell
     }
@@ -83,7 +89,12 @@ class MenuBagVC: UIViewController, UITableViewDataSource, UITableViewDelegate, P
     */
     
     @IBAction func sercueCheckout(_ sender: Any) {
-        Toast.show(message: "Successfully checkout", controller: self)
+        if (ProductBag.productList.count > 0) {
+            self.performSegue(withIdentifier: "SubmitOrderVCSeguge", sender: self)
+        }
+        else {
+            Toast.show(message: "Your bag is empty. Find something for your meal.", controller: self)
+        }
     }
     
 }

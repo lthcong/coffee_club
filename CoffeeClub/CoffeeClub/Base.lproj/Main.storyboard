@@ -1424,11 +1424,138 @@
                         <outlet property="lbSubtotal" destination="mQR-jb-J8o" id="mIL-p5-dDt"/>
                         <outlet property="lbTotal" destination="jlj-yO-yWF" id="rlW-iF-4Ho"/>
                         <outlet property="tbvItemList" destination="fgf-P1-MnJ" id="GWA-hu-lR2"/>
+                        <segue destination="NXY-2h-DeO" kind="show" identifier="SubmitOrderVCSeguge" id="h2D-qw-WYx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UK3-zq-xMk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4130.434782608696" y="787.83482142857144"/>
+        </scene>
+        <!--Submit OrderVC-->
+        <scene sceneID="t9S-pd-e9Q">
+            <objects>
+                <viewController storyboardIdentifier="SubmitOrderVCID" modalPresentationStyle="fullScreen" id="NXY-2h-DeO" customClass="SubmitOrderVC" customModule="CoffeeClub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ijR-Pv-YyC">
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="673"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qpj-h0-bqh">
+                                <rect key="frame" x="0.0" y="44" width="394" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7F-ys-xGD">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="pWt-Hb-9kE"/>
+                                        </constraints>
+                                        <state key="normal" image="menu-home"/>
+                                        <connections>
+                                            <action selector="goHome:" destination="NXY-2h-DeO" eventType="touchUpInside" id="Q7s-Q6-88d"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHECKOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uq0-GK-Zmw">
+                                        <rect key="frame" x="60" y="0.0" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7aF-qr-Nn0"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIy-ti-K3t">
+                                <rect key="frame" x="10" y="108.5" width="374" height="500"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vvk-jm-fN7">
+                                        <rect key="frame" x="10" y="5" width="354" height="490"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mv-VB-y2H">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="52.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pao-a2-61g">
+                                                <rect key="frame" x="0.0" y="62.5" width="354" height="52.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipping address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5l-vj-dN5">
+                                                <rect key="frame" x="0.0" y="125" width="354" height="52.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prc-AE-0G2">
+                                                <rect key="frame" x="0.0" y="187.5" width="354" height="52.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment method:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nG-mz-vNQ">
+                                                <rect key="frame" x="0.0" y="250" width="354" height="52.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash on delivery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fm5-Dz-aJW">
+                                                <rect key="frame" x="0.0" y="312.5" width="354" height="52.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please have your total payment ready. Thank you very much." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Oj-Mt-yZ6">
+                                                <rect key="frame" x="0.0" y="375" width="354" height="52.5"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkD-OP-h2g">
+                                                <rect key="frame" x="0.0" y="437.5" width="354" height="52.5"/>
+                                                <color key="backgroundColor" red="0.0078431372550000003" green="0.81960784310000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Submit Order">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="submitOrder:" destination="NXY-2h-DeO" eventType="touchUpInside" id="wWk-fT-Ybm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vvk-jm-fN7" secondAttribute="bottom" constant="5" id="Am2-CZ-QsH"/>
+                                    <constraint firstAttribute="trailing" secondItem="vvk-jm-fN7" secondAttribute="trailing" constant="10" id="cyc-RI-cHt"/>
+                                    <constraint firstItem="vvk-jm-fN7" firstAttribute="leading" secondItem="SIy-ti-K3t" secondAttribute="leading" constant="10" id="ta9-XD-iQ7"/>
+                                    <constraint firstAttribute="height" constant="500" id="vDB-j8-ue1"/>
+                                    <constraint firstItem="vvk-jm-fN7" firstAttribute="top" secondItem="SIy-ti-K3t" secondAttribute="top" constant="5" id="vXf-pz-7G6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eNn-dG-FDE" firstAttribute="trailing" secondItem="Qpj-h0-bqh" secondAttribute="trailing" id="7jp-M7-EBx"/>
+                            <constraint firstItem="Qpj-h0-bqh" firstAttribute="leading" secondItem="eNn-dG-FDE" secondAttribute="leading" id="Dc5-Fb-RhY"/>
+                            <constraint firstItem="SIy-ti-K3t" firstAttribute="centerY" secondItem="eNn-dG-FDE" secondAttribute="centerY" id="Lzh-ly-btL"/>
+                            <constraint firstItem="SIy-ti-K3t" firstAttribute="leading" secondItem="eNn-dG-FDE" secondAttribute="leading" constant="10" id="OVS-Gu-5Vd"/>
+                            <constraint firstItem="eNn-dG-FDE" firstAttribute="trailing" secondItem="SIy-ti-K3t" secondAttribute="trailing" constant="10" id="Sre-Cy-5Ee"/>
+                            <constraint firstItem="Qpj-h0-bqh" firstAttribute="top" secondItem="eNn-dG-FDE" secondAttribute="top" id="cg4-du-h8r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eNn-dG-FDE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cC7-MC-Roo"/>
+                    <connections>
+                        <outlet property="btnSubmitOrder" destination="PkD-OP-h2g" id="nwD-N0-aQ4"/>
+                        <outlet property="lbCashOnDelivery" destination="Fm5-Dz-aJW" id="fpW-iB-DEd"/>
+                        <outlet property="vMainView" destination="SIy-ti-K3t" id="lqV-0k-6qh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ju-S5-Ttz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3113.04347826087" y="787.5"/>
         </scene>
     </scenes>
     <resources>

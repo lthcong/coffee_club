@@ -37,7 +37,12 @@ class BreakfastDetailVC: UIViewController {
     func showProductDetail() -> Void {
         self.ivProductImage.image = UIImage(named: self.currentProduct.productImageURL)
         self.lbProductName.text = self.currentProduct.productName
-        self.lbProductPrice.text = "$" + String(self.currentProduct.productPrice)
+        if (self.currentProduct.productPrice < 10.0) {
+            self.lbProductPrice.text = "$" + String(format: "%.2f", self.currentProduct.productPrice)
+        }
+        else {
+            self.lbProductPrice.text = "$" + String(self.currentProduct.productPrice)
+        }
         self.lbProductDes.text = self.currentProduct.productDetail
     }
     
@@ -67,6 +72,11 @@ class BreakfastDetailVC: UIViewController {
     
     
     @IBAction func placeTheOrder(_ sender: Any) {
+        ProductBag.addToBag(selectedProduct: self.currentProduct)
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let submitOrderVC = storyBoard.instantiateViewController(withIdentifier: "SubmitOrderVCID") as! SubmitOrderVC
+        self.present(submitOrderVC, animated:true, completion:nil)
     }
     
     

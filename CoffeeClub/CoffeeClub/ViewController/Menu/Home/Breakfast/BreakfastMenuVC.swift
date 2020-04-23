@@ -57,7 +57,13 @@ class BreakfastMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         menuCell.currentBreakfast = self.menuList[rowIndex]
         menuCell.ivBreakfastImage.image = UIImage(named: self.menuList[rowIndex].productImageURL)
         menuCell.lbBreakfastName.text = self.menuList[rowIndex].productName
-        menuCell.lbBreakfastPrice.text = "$" + String(self.menuList[rowIndex].productPrice)
+        
+        if (self.menuList[rowIndex].productPrice < 10.0) {
+            menuCell.lbBreakfastPrice.text = "$" + String(format: "%.2f", self.menuList[rowIndex].productPrice)
+        }
+        else {
+            menuCell.lbBreakfastPrice.text = "$" + String(self.menuList[rowIndex].productPrice)
+        }
         menuCell.lbBreakfastDescription.text = self.menuList[rowIndex].productDescription
         
         return menuCell
@@ -80,7 +86,12 @@ class BreakfastMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         favoriteCell.currentProduct = self.favoriteList[rowIndex]
         favoriteCell.ivFavoriteImage.image = UIImage(named: self.favoriteList[rowIndex].productImageURL)
         favoriteCell.lbFavoriteName.text = self.favoriteList[rowIndex].productName
-        favoriteCell.lbFavoritePrice.text = "$" + String(self.favoriteList[rowIndex].productPrice)
+        if (self.favoriteList[rowIndex].productPrice < 10.0) {
+            favoriteCell.lbFavoritePrice.text = "$" + String(format: "%.2f", self.favoriteList[rowIndex].productPrice)
+        }
+        else {
+            favoriteCell.lbFavoritePrice.text = "$" + String(self.favoriteList[rowIndex].productPrice)
+        }
         favoriteCell.lbFavoriteDescription.text = self.favoriteList[rowIndex].productDescription
         
         return favoriteCell

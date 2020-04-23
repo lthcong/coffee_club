@@ -35,7 +35,13 @@ class DrinkDetailVC: UIViewController {
     func showDrinkDetail() -> Void {
         self.lbDrinkName.text = self.currentProduct.productName
         self.lbDrinkDetail.text = self.currentProduct.productDetail
-        self.lbDrinkPrice.text = "$" + String(self.currentProduct.productPrice)
+        
+        if (self.currentProduct.productPrice < 10.0) {
+            self.lbDrinkPrice.text = "$" + String(format: "%.2f", self.currentProduct.productPrice)
+        }
+        else {
+            self.lbDrinkPrice.text = "$" + String(self.currentProduct.productPrice)
+        }
     }
     
 

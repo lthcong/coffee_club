@@ -121,7 +121,13 @@ class DrinkVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIT
         productCell.ivDrinkImage.image = UIImage(named: drinkList[rowIndex].productImageURL)
         productCell.lbDrinkName.text = drinkList[rowIndex].productName
         productCell.lbDrinkDes.text = drinkList[rowIndex].productDescription
-        productCell.lbDrinkPrice.text = "$" + String(drinkList[rowIndex].productPrice)
+        
+        if (drinkList[rowIndex].productPrice < 10.0) {
+            productCell.lbDrinkPrice.text = "$" + String(format: "%.2f",drinkList[rowIndex].productPrice)
+        }
+        else {
+            productCell.lbDrinkPrice.text = "$" + String(drinkList[rowIndex].productPrice)
+        }
         
         return productCell
     }
