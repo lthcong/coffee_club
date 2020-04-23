@@ -29,5 +29,12 @@ class DiscoverVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func searchMoreDrink(_ sender: Any) {
+        self.performSegue(withIdentifier: "SignInSegueID", sender: self)
+    }
+    
+    @IBAction func checkoutMoreDrink(_ sender: Any) {
+        self.performSegue(withIdentifier: "SignInSegueID", sender: self)
+    }
 }
